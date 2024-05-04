@@ -1,0 +1,327 @@
+/*----------------------------------------*/
+/*  23. footer
+/*----------------------------------------*/
+.footer {
+    &__top {
+        border-bottom: 1px solid #F1F1F1;
+        padding-right: 32px;
+        @include respond(lg) {
+            padding-right: 0;
+        }
+        li {
+            width: 33.333%;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 35px;
+            position: relative;
+            color: #0F1928;
+            margin-top: 10px;
+            @include respond(md) {
+                width: auto;
+                padding-bottom: 25px;
+            }
+            @include respond(lg) {
+                font-size: 18px;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+                @include respond(lg) {
+                    justify-content: unset;
+                }
+                &::before,
+                &::after {
+                    position: absolute;
+                    left: -32px;
+                    bottom: 0;
+                    width: 1px;
+                    height: 81px;
+                    content: "";
+                    background-color: #F1F1F1;
+                    @include respond(lg) {
+                        display: none;
+                    }
+                }
+                &::after {
+                    left: auto;
+                    right: -32px;
+                }
+            }
+            &:nth-child(3) {
+                justify-content: end;
+            }
+            i {
+                font-size: 20px;
+                width: 44px;
+                height: 44px;
+                position: relative;
+                @include border-radius(50%);
+                overflow: hidden;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(90deg, var(--gradient-color-from) 0%, var(--gradient-color-to) 100%);
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: linear-gradient(90deg, var(--gradient-color-from) 0%, var(--gradient-color-to) 100%);
+                    opacity: 0.10000000149011612;
+                    z-index: -1;
+                }
+            }
+        }
+        &.cta-list {
+            border: 0;
+            padding: 0;
+            li {
+                padding: 0;
+                &::before,
+                &::after {
+                    height: 44px;
+                }
+            }
+        }
+    }
+    &__widget {
+        .widget-title {
+            margin-bottom: 30px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 9px;
+                }
+                a {
+                    font-size: 16px;
+                    color: #575D6B;
+                    &:hover {
+                        text-decoration: underline;
+                        color: var(--color-dark);
+                    }
+                }
+            }
+        }
+    }
+    &__copyright {
+        padding-bottom: 10px;
+    }
+    &__copyright-text {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__social {
+        li {
+            &:not(:first-child) {
+                margin-left: 16px;
+            }
+            a {
+                color: rgba(255, 255, 255, 0.4);
+                font-size: 16px;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__cta {
+        @include respond(md) {
+            padding-left: 0;
+        }
+        .title {
+            font-size: 12px;
+            color: #B3B9C2;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 16px;
+            color: #fff;
+            line-height: 30px;
+            margin-bottom: 42px;
+        }
+        .cta-number {
+            font-size: 18px;
+            color: #fff;
+            background-color: #292B2F;
+            display: inline-block;
+            padding: 13px 28px;
+            padding-right: 59px;
+            @include border-radius(26px);
+            border: 1px solid #282A2D;
+            span {
+                margin-right: 21px;
+            }
+        }
+    }
+    &__newsletter {
+        max-width: 370px;
+        position: relative;
+        input {
+            background-color: #fff;
+            @include border-radius(5px);
+            height: 50px;
+            padding: 15px;
+            font-size: 14px;
+            color: #000;
+            font-weight: 400;
+            width: calc(100% - 139px);
+        }
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 29px;
+            height: 50px;
+        }
+    }
+    &__cta-social {
+        @include respond(md) {
+            justify-content: start;
+        }
+        li {
+            &:not(:first-child) {
+                margin-left: 12px;
+            }
+            a {
+                width: 48px;
+                height: 48px;
+                @include border-radius(50%);
+                background-color: #292B2F;
+                font-size: 20px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    &__cta-link {
+        @include respond(md) {
+            justify-content: start;
+        }
+        li {
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+            a {
+                font-size: 16px;
+                color: #B3B9C2;
+                font-weight: 500;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__cta-area {
+        margin-bottom: 80px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #2A2C2F;
+    }
+    &__shape {
+        .shape {
+            position: absolute;
+            z-index: -1;
+            &--1 {
+                top: 47%;
+                left: -62px;
+            }
+            &--2 {
+                top: 37%;
+                right: -222px;
+                img {
+                    animation: spin 12s infinite linear;
+                    -webkit-animation: spin 12s infinite linear;
+                }
+            }
+        }
+    }
+}
+.footer-style-one {
+    padding-top: 240px;
+    z-index: 1;
+    .widget-title {
+        color: #fff;
+    }
+    .footer__widget ul li a {
+        color: #B3B9C2;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+.footer-style-two {
+    background-position: center -15px;
+    background-repeat: no-repeat;
+    @include respond(md) {
+        background-position: center -117px;
+    }
+    @include respond(xs) {
+        background-size: 100%;
+    }
+    .footer__copyright {
+        background: linear-gradient(62deg, #331C9C 0%, #9066FB 100%);
+    }
+    .footer__newsletter button {
+        padding: 10px 29px;
+    }
+    .footer__cta .cta-number,
+    .footer__cta-social li a {
+        background-color: #0F0E1E;
+        border-color: #0F0E1E;
+    }
+}
+.crm-community {
+    padding-bottom: 325px;
+    @include respond(lg) {
+        padding-bottom: 300px;
+    }
+    @include respond(md) {
+        padding-bottom: 180px;
+    }
+    @include respond(xs) {
+        padding-bottom: 80px;
+    }
+    &__social {
+        li {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+    }
+    .thm-btn {
+        padding: 16px 60px;
+    }
+}
+.crm-footer {
+    &__shape {
+        @include respond(xs) {
+            display: none;
+        }
+        .shape {
+            position: absolute;
+            &--1 {
+                top: 0;
+                left: 0;
+            }
+            &--2 {
+                bottom: 40%;
+                right: 0;
+            }
+        }
+    }
+}

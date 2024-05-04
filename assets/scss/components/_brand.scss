@@ -1,0 +1,291 @@
+/*----------------------------------------*/
+/*  06. brand
+/*----------------------------------------*/
+.brand {
+    position: relative;
+    z-index: 1;
+    &__head {
+        .content {
+            font-size: 30px;
+            margin-bottom: 22px;
+            @include respond(xs) {
+                font-size: 23px;
+            }
+        }
+        .number {
+            display: inline-block;
+            font-size: 180px;
+            margin-bottom: 15px;
+            @include respond(lg) {
+                font-size: 150px;
+            }
+            @include respond(md) {
+                font-size: 100px;
+            }
+            @include respond(xs) {
+                font-size: 50px;
+            }
+        }
+        .sub-title {
+            font-size: 24px;
+        }
+    }
+    &__marquee {
+        .js-marquee-wrapper {
+            height: 64px;
+        }
+    }
+    &__marquee-item {
+        float: left;
+        margin-right: 55px;
+        a {
+            padding: 13px 36px;
+            position: relative;
+            @include border-radius(30px);
+            border: 1px solid #F1F1F1;
+            @include transition(.3s);
+            &:hover {
+                background-color: var(--color-white);
+                box-shadow: 0px 18px 51px rgba(130, 137, 162, 0.18);
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+        img {
+            @include transition(.3s);
+            opacity: .5;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 38%;
+        height: 100%;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image:  url("../img/shape/hero_shape.png"), linear-gradient(47deg, #99E9A5 0%, #3847EF 100%);
+        z-index: 1;
+        padding: 40px;
+        @include respond(lg) {
+            width: 42%;
+        }
+        @include respond(md) {
+            position: unset;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .image > img {
+            @include transform(translateY(-50px));
+            @include respond(md) {
+                @include transform(translateY(0));
+            }
+        }
+        @include respond(laptop) {
+            width: 42%;
+        }
+    }
+    &__animation-img {
+        .img {
+            position: absolute;
+            
+            &--1 {
+                bottom: 46%;
+                left: 4%;
+                animation: updown 3s infinite linear;
+                -webkit-animation: updown 3s infinite linear;
+                @include respond(lg) {
+                    bottom: 50%;
+                    max-width: 70px;
+                }
+                @include respond(md) {
+                    bottom: 39%;
+                    max-width: 80px;
+                    left: 7%;
+                }
+                @include respond(xs) {
+                    bottom: 37%;
+                    max-width: 40px;
+                }
+            }
+            &--2 {
+                top: -13%;
+                right: 21%;
+                animation: updown-2 2s infinite linear;
+                -webkit-animation: updown-2 2s infinite linear;
+                @include respond(laptop) {
+                    top: -17%;
+                    right: 20%;
+                }
+                @include respond(lg) {
+                    top: -22%;
+                    right: 19%;
+                    max-width: 91px;
+                }
+                @include respond(md) {
+                    top: 0%;
+                    right: 25%;
+                }
+                @include respond(xs) {
+                    top: 0%;
+                    right: 22%;
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+    &__area {
+        margin-left: 40px;
+        margin-right: 40px;
+        @include respond(xs) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &__item {
+        width: 33.33%;
+        border-right: 1px solid rgba(255, 255, 255, 0.10);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include transition(.3s);
+        @include respond(xs) {
+            width: 50%;
+        }
+        a {
+            display: inline-block;
+            width: 100%;
+            min-height: 150px;
+            @include respond(laptop) {
+                min-height: 120px;
+            }
+            @include respond(lg) {
+                min-height: 106px;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(6),
+        &:nth-child(9) {
+            border-right: none;
+        }
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+            border-bottom: none;
+        }
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(8) {
+            @include respond(xs) {
+                border-right: 0;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(9) {
+            @include respond(xs) {
+                border-right: 1px solid rgba(255, 255, 255, 0.10);
+            }
+        }
+        &:nth-child(7),
+        &:nth-child(8) {
+            @include respond(xs) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+            }
+        }
+        &:hover {
+            background-color: #292B2F;
+            .dot {
+                opacity: 1;
+            }
+            img {
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+                &:nth-child(2) {
+                    opacity: 1;
+                }
+            }
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include transition(.3s);
+            @include respond(lg) {
+                max-width: 130px;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+        .dot {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: #fff;
+            opacity: 0;
+            @include transition(.3s);
+            &--1 {
+                top: -1px;
+                left: -1px;
+            }
+            &--2 {
+                top: -1px;
+                right: -1px;
+            }
+            &--3 {
+                right: -1px;
+                bottom: -1px;
+            }
+            &--4 {
+                left: -1px;
+                bottom: -1px;
+            }
+        }
+    }
+    &__shape {
+        position: absolute;
+        top: 50%;
+        right: -222px;
+        @include transform(translateY(-50%));
+        z-index: -1;
+        @include respond(lg) {
+            max-width: 300px;
+        }
+        img {
+            animation: spin 12s infinite linear;
+            -webkit-animation: spin 12s infinite linear;
+        }
+    }
+    &__pb {
+        padding-bottom: 280px;
+        @include respond(laptop) {
+            padding-bottom: 250px;
+        }
+        @include respond(lg) {
+            padding-bottom: 250px;
+        }
+    }
+    &__vector {
+        @include respond(md) {
+            display: none;
+        }
+        .vector {
+            position: absolute;
+            &--1 {
+                top: 27%;
+                left: 5%;
+            }
+            &--2 {
+                top: 28%;
+                right: 5%;
+            }
+        }
+    }
+}

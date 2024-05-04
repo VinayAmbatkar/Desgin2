@@ -1,0 +1,105 @@
+/*----------------------------------------*/
+/*  15. template
+/*----------------------------------------*/
+.template {
+    &__item {
+        background-color: #1F2123;
+        text-align: center;
+        @include border-radius(15px);
+        padding: 50px 30px 0;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            @include transition(.3s);
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+            a i {
+                color: #1F2123;
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .title {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        a {
+            margin-bottom: 54px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                margin-right: 10px;
+                width: 21px;
+                height: 21px;
+                @include border-radius(50%);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                @include transition(.3s);
+                z-index: 1;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    content: "";
+                    z-index: -1;
+                    opacity: 0;
+                    @include transition(.3s);
+                }
+            }
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @include respond(xs) {
+            justify-content: start;
+        }
+        .template-nav-item {
+            width: 54px;
+            height: 54px;
+            border: 1px solid #F1F1F1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #0F1928;
+            @include border-radius(50%);
+            @include transition(.3s);
+            &:hover {
+                background-color: #F8F8F8;
+            }
+            &.template-button-next {
+                margin-left: 20px;
+            }
+        }
+    }
+}

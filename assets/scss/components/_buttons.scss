@@ -1,0 +1,73 @@
+.thm-btn {
+    transition: all .2s cubic-bezier(.68,.01,.58,.75) !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: None;
+    color: var(--color-white);
+    border-style: none;
+    padding: 21px 50px;
+    align-self: center;
+    position: relative;
+    display: inline-block;
+    @include border-radius(30px);
+    line-height: 1.1;
+    letter-spacing: -.3px;
+    @include transition(all 300ms linear 0ms);
+    &--gradient {
+        background-size: 200%,1px;
+        background-image: -moz-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
+        background-image: -webkit-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
+        background-image: -ms-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
+        background-image: linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
+        &:hover {
+            color: var(--color-white);
+            background-position: 100% 0;
+        }
+        &.style-2 {
+            background-image: -moz-linear-gradient(to right, var(--gradient-color-from-2) 0%, var(--gradient-color-to-2) 51%, var(--gradient-color-from-2) 100%);
+            background-image: -webkit-linear-gradient(to right, var(--gradient-color-from-2) 0%, var(--gradient-color-to-2) 51%, var(--gradient-color-from-2) 100%);
+            background-image: -ms-linear-gradient(to right, var(--gradient-color-from-2) 0%, var(--gradient-color-to-2) 51%, var(--gradient-color-from-2) 100%);
+            background-image: linear-gradient(to right, var(--gradient-color-from-2) 0%, var(--gradient-color-to-2) 51%, var(--gradient-color-from-2) 100%);
+            padding: 16px 41px;
+        }
+    }
+    &.br-5 {
+        @include border-radius(5px);
+    }
+    &--dark {
+        background-color: var(--color-dark);
+        &:hover {
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+    &--outline {
+        border: 1px solid #F1F1F1;
+        color: var(--color-dark);
+        padding: 21px 40px;
+        i {
+            font-size: 15px;
+            margin-right: 8px;
+        }
+        &:hover {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border-color: var(--color-dark);
+        }
+        &.style-2 {
+            padding: 16px 41px;
+            color: #fff;
+            border: 1.2px solid #282D45;
+            background: linear-gradient(216deg, rgba(21, 25, 52, 0.52) 0%, rgba(21, 25, 52, 0.08) 47.92%, rgba(21, 25, 52, 0.49) 100%);
+        }
+    }
+    
+}
+
+
+.btns {
+    margin: -12px;
+    a {
+        margin: 12px;
+    }
+}

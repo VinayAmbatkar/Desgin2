@@ -1,0 +1,90 @@
+/*-----------------------------------------------------------------------------------
+
+    Project Name: Helax - Tech Startup Landing Page Html Template
+    Author: XpressBuddy -->> (https://themeforest.net/user/xpressbuddy)
+    Support: wasimmia.info@gmail.com
+    Description: Helax - Tech Startup Landing Page Html Template
+    Developer: Mohammad Wasim Mia -> wasimmia.info@gmail.com
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+	01. Theme default CSS
+    02. header
+    03. global
+    04. hero
+    05. about
+    06. brand
+    07. feature
+    08. service
+    09. sidebar
+    10. step
+    11. testimonial
+    12. preloader
+    13. backtotop
+    14. cursor
+    15. template
+    16. intergation
+    17. cta
+    18. instagram
+    19. process
+    20. breadcrumb
+    21. blog
+    22. contact
+    23. footer
+    
+
+-----------------------------------------------------------------------------------*/
+// abstracts scss
+@import
+    'abstracts/variables',
+    'abstracts/mixins';
+
+// base scss
+@import 
+    'base/fonts',
+    'base/base',
+    'base/spacing',
+    'base/typography',
+    'base/animation',
+    'base/overlay';
+
+// layout scss
+@import 
+    'layout/header',
+    'layout/navigation';
+ 
+// components scss
+@import 
+    'components/buttons',
+    'components/global',
+    'components/hero',
+    'components/about',
+    'components/brand',
+    'components/feature',
+    'components/service',
+    'components/sidebar',
+    'components/step',
+    'components/testimonial',
+    'components/preloader',
+    'components/backtotop',
+    'components/cursor',
+    'components/template',
+    'components/intergation',
+    'components/cta',
+    'components/instagram',
+    'components/process',
+    'components/search',
+    'components/breadcrumb',
+    'components/blog',
+    'components/contact',
+    'components/sec-title';
+
+
+// layout scss
+@import
+    'layout/footer';
+ 

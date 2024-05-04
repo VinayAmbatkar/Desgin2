@@ -1,0 +1,53 @@
+/*----------------------------------------*/
+/*  10. step
+/*----------------------------------------*/
+.step {
+    &__single {
+        border: 1px solid #F1F1F1;
+        padding: 55px 50px;
+        padding-right: 40px;
+        @include border-radius(20px);
+        @include transition(.3s);
+        &:hover {
+            background-color: var(--color-white);
+            box-shadow: 0px 18px 51px rgba(130, 137, 162, 0.18);
+            border-color: var(--color-white);
+        }
+        & > span {
+            padding: 2px 20px;
+            color: var(--color-white);
+            @include border-radius(20px);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+        h4 {
+            font-size: 24px;
+            margin-bottom: 17px;
+            span {
+                color: #7E848B;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: #575D6B;
+        }
+    }
+    &__shape {
+        .shape {
+            position: absolute;
+            z-index: -1;
+            &--1 {
+                bottom: -30%;
+                left: 0;
+            }
+            &--2 {
+                bottom: 18%;
+                right: 3%;
+            }
+        }
+    }
+}

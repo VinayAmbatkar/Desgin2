@@ -1,0 +1,66 @@
+/*----------------------------------------*/
+/*  16. intergation
+/*----------------------------------------*/
+.intergation {
+    &__item {
+        background-color: #fff;
+        @include border-radius(20px);
+        padding: 32px 30px 40px;
+        @include respond(lg) {
+            padding: 32px 20px 40px;
+        }
+        .icon {
+            margin-bottom: 27px;
+        }
+        h3 {
+            font-size: 26px;
+            margin-bottom: 28px;
+            color: #202026;
+        }
+        p {
+            font-size: 14px;
+            color: #6B6B71;
+            line-height: 24px;
+            margin-bottom: 41px;
+        }
+        a {
+            font-size: 16px;
+            color: #202026;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                margin-right: 10px;
+                width: 21px;
+                height: 21px;
+                @include border-radius(50%);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                @include transition(.3s);
+                z-index: 1;
+                position: relative;
+            }
+        }
+    }
+    &__bg {
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 38%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("../img/shape/hero_shape.png"), linear-gradient(47deg, #99E9A5 0%, #3847EF 100%);
+            z-index: -1;
+            content: "";
+        }
+    }
+}

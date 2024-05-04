@@ -1,0 +1,10 @@
+/*----------------------------------------*/
+/*  05. about
+/*----------------------------------------*/
+.about {
+    z-index: 11;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include border-radius(40px);
+}
