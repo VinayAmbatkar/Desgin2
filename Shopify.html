@@ -101,14 +101,14 @@
                                             <li><a href="features.html">Features</a></li>
                                             <li><a href="Vbuilder.html">Visual Builder</a></li>
                                             <li><a href="DResponses.html">Dynamic Responses</a></li>
-                                            <li><a href="connect.html">Connect</a></li>
+                                            <!-- <li><a href="connect.html">Connect</a></li> -->
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children active"><a href="index.html"> Solutions <i class="fa-solid fa-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="marketing.html"><i class="fa-solid fa-bullhorn"></i> Marketing</a></li>
                                             <li><a href="sales.html"><i class="fa-solid fa-cart-shopping"></i>  Sales</a></li>
-                                            <li><a href="support.html"><i class="fa-regular fa-circle-user"></i>  Support</a></li>
+                                            <!-- <li><a href="support.html"><i class="fa-regular fa-circle-user"></i>  Support</a></li> -->
                                             <li><a href="education.html"><i class="fa-solid fa-graduation-cap"></i>  Education</a></li>
                                             <li><a href="enterprise.html"> <i class="fa-solid fa-earth-americas"></i>  Enterprise</a></li>
                                             <li><a href="healthcare.html"><i class="fa-regular fa-heart"></i>  Healthcare</a></li>
@@ -128,7 +128,7 @@
                                     </li>
                                     <li class="menu-item-has-children active"><a href="index.html">Resources <i class="fa-solid fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="Help_Center.html"><i class="fa-solid fa-handshake-angle"></i>  Help Center</a></li>
+                                            <li><a href="HelpCenter.html"><i class="fa-solid fa-handshake-angle"></i>  Help Center</a></li>
                                             <li><a href="template.html"><i class="fa-solid fa-layer-group"></i>  Template</a></li>
                                             <li><a href="HelpDesk.html"><i class="fa-brands fa-uncharted"></i>  API & Developers</a></li>
                                             <li><a href="PartnerProgram.html"><i class="fa-regular fa-star"></i>  Partner Program</a></li>
@@ -205,9 +205,11 @@
                 <ul class="sidebar-menu list-unstyled">
                     <li><a href="#!">About</a></li>
                     <li><a href="#!">Services</a></li>
-                    <li><a href="#!">Projects</a></li>
-                    <li><a href="#!">Blog</a></li>
-                    <li><a href="#!">Contact</a></li>
+                    <!-- <li><a href="HelpCenter.html">Help Center</a></li>
+                    <li><a href="HelpDesk.html">Help Desk</a></li> -->
+                    <li><a href="#!">Support</a></li>
+                    <li><a href="Connect.html">Connect</a></li>
+                    <!-- <li><a href="#!">Contact</a></li> -->
                 </ul>
                 <div class="ul_li mt-60">
                     <div class="ct-content-wrap d-flex">
@@ -302,7 +304,16 @@
                                     <li>Click on the "Actions" dropdown for your active theme and select "Edit code."</li>
                                     <li>Upload JS File:</li>
                                     <li>Upload your loadChatbot.js file to your Shopify theme. You can place it in the "Assets" folder.</li>
-                                    <li>Include JS in Theme:</li>
+                                    
+                                  </ul>
+                                 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-30">
+                            <div class="step__single">
+                                <span>Step 03</span>
+                                <h4><span></span>Include JS in Theme:</h4>
+                                <ul>
                                     <li>In the "Sections" or "Templates" folder (depending on your theme structure), locate the theme file (e.g., theme.liquid or footer.liquid) where you want to include your JavaScript file.</li>
                                     <li>Add the following code just before the closing &lt;/body&gt; tag:<br>
                                       <code>&lt;script src="{{ 'loadChatbot.js' | asset_url }}"&gt;&lt;/script&gt;</code><br>
@@ -313,14 +324,14 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mt-30">
                             <div class="step__single">
-                                <span>Step 03</span>
+                                <span>Step 04</span>
                                 <h4><span></span>Save Changes</h4>
                                 <p>Save the changes in the Shopify theme editor.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mt-30">
                             <div class="step__single">
-                                <span>Step 04</span>
+                                <span>Step 05</span>
                                 <h4><span></span> Verify</h4>
                                 <ul>
                                     <li>Visit your Shopify store and open the browser's developer tools (usually by right-clicking and selecting "Inspect").</li>
@@ -331,7 +342,7 @@
                         </div>
                          <div class="col-lg-4 col-md-6 mt-30">
                             <div class="step__single">
-                                <span>Step 05</span>
+                                <span>Step 06</span>
                                 <h4><span></span> Test</h4>
                                 <p>Test the chat window functionality to ensure it appears as expected on your Shopify store.</p>
                             </div>

@@ -101,14 +101,14 @@
                                             <li><a href="features.html">Features</a></li>
                                             <li><a href="Vbuilder.html">Visual Builder</a></li>
                                             <li><a href="DResponses.html">Dynamic Responses</a></li>
-                                            <li><a href="connect.html">Connect</a></li>
+                                            <!-- <li><a href="connect.html">Connect</a></li> -->
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children active"><a href="index.html"> Solutions <i class="fa-solid fa-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="marketing.html"><i class="fa-solid fa-bullhorn"></i> Marketing</a></li>
                                             <li><a href="sales.html"><i class="fa-solid fa-cart-shopping"></i>  Sales</a></li>
-                                            <li><a href="support.html"><i class="fa-regular fa-circle-user"></i>  Support</a></li>
+                                            <!-- <li><a href="support.html"><i class="fa-regular fa-circle-user"></i>  Support</a></li> -->
                                             <li><a href="education.html"><i class="fa-solid fa-graduation-cap"></i>  Education</a></li>
                                             <li><a href="enterprise.html"> <i class="fa-solid fa-earth-americas"></i>  Enterprise</a></li>
                                             <li><a href="healthcare.html"><i class="fa-regular fa-heart"></i>  Healthcare</a></li>
@@ -128,7 +128,7 @@
                                     </li>
                                     <li class="menu-item-has-children active"><a href="index.html">Resources <i class="fa-solid fa-angle-down"></i></a>
                                         <ul class="submenu">
-                                            <li><a href="Help_Center.html"><i class="fa-solid fa-handshake-angle"></i>  Help Center</a></li>
+                                            <li><a href="HelpCenter.html"><i class="fa-solid fa-handshake-angle"></i>  Help Center</a></li>
                                             <li><a href="template.html"><i class="fa-solid fa-layer-group"></i>  Template</a></li>
                                             <li><a href="HelpDesk.html"><i class="fa-brands fa-uncharted"></i>  API & Developers</a></li>
                                             <li><a href="PartnerProgram.html"><i class="fa-regular fa-star"></i>  Partner Program</a></li>
@@ -205,9 +205,11 @@
                 <ul class="sidebar-menu list-unstyled">
                     <li><a href="#!">About</a></li>
                     <li><a href="#!">Services</a></li>
-                    <li><a href="#!">Projects</a></li>
-                    <li><a href="#!">Blog</a></li>
-                    <li><a href="#!">Contact</a></li>
+                    <!-- <li><a href="HelpCenter.html">Help Center</a></li>
+                    <li><a href="HelpDesk.html">Help Desk</a></li> -->
+                    <li><a href="#!">Support</a></li>
+                    <li><a href="Connect.html">Connect</a></li>
+                    <!-- <li><a href="#!">Contact</a></li> -->
                 </ul>
                 <div class="ul_li mt-60">
                     <div class="ct-content-wrap d-flex">
@@ -229,7 +231,7 @@
             <!-- sidebar-info end -->
 
             <!-- side-mobile-menu start -->
-            <nav class="side-mobile-menu">
+            <!-- <nav class="side-mobile-menu">
                 <div class="header-mobile-search">
                     <form role="search" method="get" action="#"> 
                         <input type="text" placeholder="Search Keywords"> 
@@ -255,7 +257,7 @@
                     </li>
                     <li><a class="scrollspy-btn" href="contact.html">Get in touch</a></li>
                 </ul>
-            </nav>
+            </nav> -->
             <!-- side-mobile-menu end -->
         </aside>
 
@@ -306,12 +308,15 @@
                                 <marquee>You can either add a reference to your JavaScript file directly in your theme files
                                     or use a plugin to manage custom scripts. Here are both approaches:</marquee>
                                     <li>a. Edit Theme Files:</li>
-                                    <p> Open the theme you are using for your WordPress site.</p>
-                                    <p>Add the following code to your theme's header.php file just before the  &lt;head> tag:</p>
+                                    <p> Navigate to the theme directory of your WordPress site.</p>
+                                    <p>Open the header.php file.
+                                        Insert the following code just before the <head> tag:</p>
                                     <li>b. Use Plugin:</li>
-                                    <p>Install a WordPress plugin that allows you to add custom JavaScript to your site. A popular choice is "Insert Headers and Footers."</p>
-                                    <p>Once installed, go to your WordPress dashboard, navigate to "Settings" > "Insert Headers and Footers," and add the following code in the "Scripts in Footer" section:</p>
-                                  <p><mark>Replace /path/to/loadChatbot.js with the actual path where your file is located within your theme directory</mark></p>
+                                    <p>Install the "Insert Headers and Footers" plugin from the WordPress repository.
+                                        Access your WordPress dashboard.
+                                        </p>
+                                    <p>Go to "Settings" > "Insert Headers and Footers."</p>
+                                  <p><mark>In "Scripts in Footer," add code, replacing /path/to/loadChatbot.js.</mark></p>
                                  
                             </div>
                         </div>
