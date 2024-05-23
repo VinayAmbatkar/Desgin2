@@ -26,20 +26,27 @@
         /*! This file is auto-generated */
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
     </script>
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 0.07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
+    
+   <style type="text/css">
+     img.wp-smiley,
+     img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+    }
+
+
+        body {
+            background-color: #cfeaef; /* Adjust the color code as needed */
         }
-    </style>
+    
+</style>
     <link rel='stylesheet' id='wp-block-library-css'
         href='https://helax.xpressbuddy.com/wp-includes/css/dist/block-library/style.min.css?ver=6.3.4' type='text/css'
         media='all' />
@@ -1020,63 +1027,57 @@
                                         </div>
                                         <!-- sidebar-info end -->
                                         <!-- side-mobile-menu start -->
-                                        <!-- <nav class="side-mobile-menu">
+                                        <nav class="side-mobile-menu">
                                             <div class="header-mobile-search">
-                                                <form role="search" method="post"
-                                                    action="https://helax.xpressbuddy.com/">
-                                                    <input type="text" name="s" placeholder="Search Keywords" value="">
+                                                <form role="search" method="get" action="#"> 
+                                                    <input type="text" placeholder="Search Keywords"> 
+                                                    <button type="submit"><i class="ti-search"></i></button>
                                                 </form>
                                             </div>
-                                            <ul id="mobile-menu-active" class="menu">
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home dropdown menu-item-523">
-                                                    <a href="https://helax.xpressbuddy.com/"><span>Home</span></a>
+                                            <ul id="mobile-menu-active">
+                                                <li class="dropdown"><a href="index.html">Products <i class="fa-solid fa-angle-down"></i></a>
                                                     <ul class="sub-menu">
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-529">
-                                                            <a href="https://helax.xpressbuddy.com/"><span>Home
-                                                                    Chatbot</span></a></li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-525">
-                                                            <a href="https://helax.xpressbuddy.com/home-crm/"><span>Home
-                                                                    CRM</span></a></li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524">
-                                                            <a href="https://helax.xpressbuddy.com/home-copy-writing/"><span>Home
-                                                                    Copy Writing</span></a></li>
+                                                        <li><a href="Benefits.html">Benefits</a></li>
+                                                        <li><a href="features.html">Features</a></li>
+                                                        <li><a href="Vbuilder.html">Visual Builder</a></li>
+                                                        <li><a href="DResponses.html">Dynamic Responses</a></li>
+                                                        <!-- <li><a href="connect.html">Connect</a></li> -->
                                                     </ul>
                                                 </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149">
-                                                    <a href="https://helax.xpressbuddy.com/home-copy-writing/#whatwedo"><span>What
-                                                            we do</span></a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150">
-                                                    <a
-                                                        href="https://helax.xpressbuddy.com/home-copy-writing/#process"><span>Process</span></a>
-                                                </li>
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-142">
-                                                    <a href="https://helax.xpressbuddy.com/blog/"><span>Blog</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
-                                                            <a
-                                                                href="https://helax.xpressbuddy.com/blog/"><span>Blog</span></a>
-                                                        </li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-148">
-                                                            <a
-                                                                href="https://helax.xpressbuddy.com/2023/08/04/demystifying-artificial-intelligence-a-beginners-guide-to-ai/"><span>Blog
-                                                                    Details</span></a></li>
+                                                <li class="dropdown"><a href="index.html">Solutions <i class="fa-solid fa-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="marketing.html"><i class="fa-solid fa-bullhorn"></i> Marketing</a></li>
+                                                        <li><a href="sales.html"><i class="fa-solid fa-cart-shopping"></i>  Sales</a></li>
+                                                        <!-- <li><a href="support.html"><i class="fa-regular fa-circle-user"></i>  Support</a></li> -->
+                                                        <li><a href="education.html"><i class="fa-solid fa-graduation-cap"></i>  Education</a></li>
+                                                        <li><a href="enterprise.html"> <i class="fa-solid fa-earth-americas"></i>  Enterprise</a></li>
+                                                        <li><a href="healthcare.html"><i class="fa-regular fa-heart"></i>  Healthcare</a></li>
                                                     </ul>
                                                 </li>
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-17 current_page_item menu-item-143">
-                                                    <a href="https://helax.xpressbuddy.com/contact-us/"
-                                                        aria-current="page"><span>Get in touch</span></a></li>
+                                                <li class="dropdown"><a href="index.html">Integration <i class="fa-solid fa-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="index1.html"><i class="fa-solid fa-message"></i>  Chat Widget</a></li>
+                                                        <li><a href="LiveChat.html"><i class="fa-solid fa-headset"></i>  Live Chat</a></li>
+                                                        <li><a href="HelpDesk.html"><i class="fa-regular fa-square-check"></i>  Help Desk</a></li>
+                                                        <li><a href="Facebook Messenger.html"><i class="fa-brands fa-facebook-messenger"></i>  FaceBook Messenger</a></li>
+                                                        <li><a href="Shopify.html"><i class="fa-brands fa-shopify"></i>  Shopify</a></li>
+                                                        <li><a href="slack.html"><i class="fa-brands fa-slack"></i>  Slack</a></li>
+                                                        <li><a href="WordPress.html"><i class="fa-brands fa-wordpress-simple"></i>WordPress</a></li>
+                                                        <li><a href="integration.html">See all Integration</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="index.html">Resources<i class="fa-solid fa-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="HelpCenter.html"><i class="fa-solid fa-handshake-angle"></i>  Help Center</a></li>
+                                                        <li><a href="template.html"><i class="fa-solid fa-layer-group"></i>  Template</a></li>
+                                                        <li><a href="HelpDesk.html"><i class="fa-brands fa-uncharted"></i>  API & Developers</a></li>
+                                                        <li><a href="PartnerProgram.html"><i class="fa-regular fa-star"></i>  Partner Program</a></li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li><a class="scrollspy-btn" href=".html">Pricing</a></li>
                                             </ul>
-                                        </nav> -->
+                                        </nav>  
                                         <!-- side-mobile-menu end -->
                                     </aside>
                                     <div class="header-search-form-wrapper">
